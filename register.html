@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Register for Event</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="register.html">Register</a>
+</nav>
+
+<div class="form-container">
+    <form id="regForm">
+
+        <input type="text" id="adm" placeholder="Admission Number"><br>
+        <input type="text" id="name" placeholder="Full Name"><br>
+
+        <select id="event">
+            <option>Select Event</option>
+            <option>Cultural Week</option>
+            <option>Sports Day</option>
+            <option>Student Election</option>
+            <option>Tree Planting Day</option>
+        </select><br>
+
+        <input type="email" id="email" placeholder="Email"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="success">✅ Registration Successful!</p>
+</div>
+
+<script>
+$("#success").hide();
+
+$("#regForm").submit(function(e){
+    e.preventDefault();
+
+    let adm = $("#adm").val();
+    let name = $("#name").val();
+    let email = $("#email").val();
+
+    if(adm === "" || name === "" || email === ""){
+        alert("Please fill all fields");
+    } else {
+        $("#success").fadeIn();
+    }
+});
+</script>
+
+</body>
+</html>

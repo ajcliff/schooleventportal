@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Campus Events</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="register.html">Register</a>
+</nav>
+
+<div class="container">
+
+    <!-- Event 1 -->
+    <div class="card">
+        <img src="https://picsum.photos/300/200?culture">
+        <h3>Cultural Week</h3>
+        <p>Date: April 10</p>
+        <p>Experience diverse cultures.</p>
+        <button class="toggle">Show More</button>
+        <div class="more">Food, music, dance, and fashion shows!</div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="card">
+        <img src="https://picsum.photos/300/200?sports">
+        <h3>Sports Day</h3>
+        <p>Date: April 15</p>
+        <p>Join exciting games.</p>
+        <button class="toggle">Show More</button>
+        <div class="more">Football, basketball, athletics competitions.</div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="card">
+        <img src="https://picsum.photos/300/200?election">
+        <h3>Student Election</h3>
+        <p>Date: April 20</p>
+        <p>Vote your leaders.</p>
+        <button class="toggle">Show More</button>
+        <div class="more">Campaigns, debates, and voting.</div>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="card">
+        <img src="https://picsum.photos/300/200?tree">
+        <h3>Tree Planting Day</h3>
+        <p>Date: April 25</p>
+        <p>Go green initiative.</p>
+        <button class="toggle">Show More</button>
+        <div class="more">Join us in planting trees around campus.</div>
+    </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".more").hide();
+
+    $(".toggle").click(function(){
+        $(this).next(".more").slideToggle();
+    });
+});
+</script>
+
+</body>
+</html>
